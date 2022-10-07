@@ -8,7 +8,7 @@ Use this framework once you have fetched the PHAsset from the user. If you have 
 
 Let the user choose their image from photos library, then use the extractData function with your PHAsset
 
-```
+```swift
 var tiffData: TIFF?
 var exifData: EXIF?
 var photoInfo: [String: Any]?
