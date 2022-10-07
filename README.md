@@ -18,6 +18,9 @@ ExifExtractor().extractData(from: myAsset) { tiff, exif, info, errors in
     tiffData = tiff
     exifData = exif
 }
+// access the properties
+exifData?.shutterSpeedValue
+exifData?.isoValue
 ```
 
 The extractData function returns three values, the tiff, exif and a dictionary containing all the info of the image. You can use the dictionary if there is some custom info in the image that is not a part of the standard TIFF/EXIF info.
