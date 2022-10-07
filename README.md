@@ -1,4 +1,4 @@
-# ``ExifExtractor``
+# ExifExtractor
 
 Allows you to extract EXIF and TIFF information about an image
 
