@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class TIFF: Codable {
+public class TIFF {
     
     public var cameraModel: String?
     public var cameraSoftware: String?
