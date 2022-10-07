@@ -11,6 +11,10 @@
 		45F79D3128F0A07200C1B2EE /* ExifExtractor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F79D2628F0A07200C1B2EE /* ExifExtractor.framework */; };
 		45F79D3628F0A07300C1B2EE /* ExifExtractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F79D3528F0A07300C1B2EE /* ExifExtractorTests.swift */; };
 		45F79D3728F0A07300C1B2EE /* ExifExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 45F79D2928F0A07200C1B2EE /* ExifExtractor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45F79D4128F0A0D500C1B2EE /* ExifExtractorMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F79D4028F0A0D500C1B2EE /* ExifExtractorMain.swift */; };
+		45F79D4328F0A3AC00C1B2EE /* TIFF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F79D4228F0A3AC00C1B2EE /* TIFF.swift */; };
+		45F79D4528F0A3BC00C1B2EE /* EXIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F79D4428F0A3BC00C1B2EE /* EXIF.swift */; };
+		45F79D4728F0B0F200C1B2EE /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F79D4628F0B0F200C1B2EE /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		45F79D2A28F0A07200C1B2EE /* ExifExtractor.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ExifExtractor.docc; sourceTree = "<group>"; };
 		45F79D3028F0A07200C1B2EE /* ExifExtractorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExifExtractorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F79D3528F0A07300C1B2EE /* ExifExtractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExifExtractorTests.swift; sourceTree = "<group>"; };
+		45F79D4028F0A0D500C1B2EE /* ExifExtractorMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExifExtractorMain.swift; sourceTree = "<group>"; };
+		45F79D4228F0A3AC00C1B2EE /* TIFF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIFF.swift; sourceTree = "<group>"; };
+		45F79D4428F0A3BC00C1B2EE /* EXIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXIF.swift; sourceTree = "<group>"; };
+		45F79D4628F0B0F200C1B2EE /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				45F79D2928F0A07200C1B2EE /* ExifExtractor.h */,
+				45F79D4028F0A0D500C1B2EE /* ExifExtractorMain.swift */,
+				45F79D4228F0A3AC00C1B2EE /* TIFF.swift */,
+				45F79D4428F0A3BC00C1B2EE /* EXIF.swift */,
+				45F79D4628F0B0F200C1B2EE /* Errors.swift */,
 				45F79D2A28F0A07200C1B2EE /* ExifExtractor.docc */,
 			);
 			path = ExifExtractor;
@@ -195,6 +207,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				45F79D2B28F0A07200C1B2EE /* ExifExtractor.docc in Sources */,
+				45F79D4728F0B0F200C1B2EE /* Errors.swift in Sources */,
+				45F79D4528F0A3BC00C1B2EE /* EXIF.swift in Sources */,
+				45F79D4328F0A3AC00C1B2EE /* TIFF.swift in Sources */,
+				45F79D4128F0A0D500C1B2EE /* ExifExtractorMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +366,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,6 +395,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,10 +414,12 @@
 		45F79D3E28F0A07300C1B2EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HJXYY5247H;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tadreik.ExifExtractorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,10 +432,12 @@
 		45F79D3F28F0A07300C1B2EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HJXYY5247H;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tadreik.ExifExtractorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

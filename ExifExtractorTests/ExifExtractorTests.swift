@@ -7,8 +7,11 @@
 
 import XCTest
 @testable import ExifExtractor
+import Photos
 
 final class ExifExtractorTests: XCTestCase {
+    
+    let sut = ExifExtractor()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -17,19 +20,15 @@ final class ExifExtractorTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    // test should fail if the data returned is nil
+    func testExtractInfoFromImage() throws {
+        // need to get a proper image to finish this test
+        let data = Data()
+        sut.extractInfoFromImage(data: data) { tiff, exif, info, errors in
+            XCTAssertNotNil(tiff)
+            XCTAssertNotNil(exif)
+            XCTAssertNotNil(info)
         }
     }
 
