@@ -9,9 +9,9 @@ import Foundation
 
 public class TIFF {
     
-    public var cameraModel: String?
-    public var cameraSoftware: String?
-    public var make: String?
+    public private(set) var cameraModel: String?
+    public private(set) var cameraSoftware: String?
+    public private(set) var make: String?
     
     
     public init(dictionary: [String: Any]) {

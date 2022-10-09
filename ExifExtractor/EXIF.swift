@@ -9,11 +9,11 @@ import Foundation
 
 public class EXIF {
     
-    public var aperture: String?
-    public var focalLength: String?
-    public var isoValue: String?
-    public var lensModel: String?
-    public var shutterSpeedValue: String?
+    public private(set) var aperture: String?
+    public private(set) var focalLength: String?
+    public private(set) var isoValue: String?
+    public private(set) var lensModel: String?
+    public private(set) var shutterSpeedValue: String?
     
     public init(dictionary: [String: Any], cameraModel: String?) {
         if let aperture = dictionary["FNumber"] {
