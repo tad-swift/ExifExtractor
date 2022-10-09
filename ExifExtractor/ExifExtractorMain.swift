@@ -21,7 +21,7 @@ public class ExifExtractor {
     /// Input a PHAsset and recives back its info
     public func extractData(from asset: PHAsset, completion: @escaping (TIFF?, EXIF?, [String: Any]?, [Error]) -> Void) {
         queue.addOperation { [weak self] in
-            self?.requestImageData(from: asset) { data in
+            self?.requestImageData(for: asset) { data in
                 if let data = data {
                     self?.extractInfoFromImage(data: data) { tiff, exif, info, errors in
                         completion(tiff, exif, info, errors)
