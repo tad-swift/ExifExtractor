@@ -19,11 +19,11 @@ public class ExifExtractor {
     }
     
     /// Input a PHAsset and recives back its info
-    public func extractData(from asset: PHAsset, completion: @escaping (TIFF?, EXIF?, [String: Any]?, [Error]) -> Void) {
+    public func extractInfo(from asset: PHAsset, completion: @escaping (TIFF?, EXIF?, [String: Any]?, [Error]) -> Void) {
         queue.addOperation { [weak self] in
             self?.requestImageData(for: asset) { data in
                 if let data = data {
-                    self?.extractInfoFromImage(data: data) { tiff, exif, info, errors in
+                    self?.extractInfo(from: data) { tiff, exif, info, errors in
                         completion(tiff, exif, info, errors)
                     }
                 } else {
@@ -51,7 +51,7 @@ public class ExifExtractor {
     }
     
     /// Initializes tiff and exif objects and returns them along with any errors
-    func extractInfoFromImage(data: Data, completion: (TIFF?, EXIF?, [String: Any]?, [Error]) -> Void) {
+    public func extractInfo(from data: Data, completion: (TIFF?, EXIF?, [String: Any]?, [Error]) -> Void) {
         var errors: [Error] = []
         guard let image = CIImage(data: data) else {
             errors.append(ExtractionError.intializeImageFailed)

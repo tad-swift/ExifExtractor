@@ -13,7 +13,8 @@ var tiffData: TIFF?
 var exifData: EXIF?
 var photoInfo: [String: Any]?
 
-ExifExtractor().extractData(from: myAsset) { tiff, exif, info, errors in
+// You can also pass in a `Data` representation of an image instead of a `PHAsset`
+ExifExtractor().extractInfo(from: myAsset) { tiff, exif, info, errors in
     // assign to vars so you can use them elsewhere in your code
     tiffData = tiff
     exifData = exif
@@ -23,6 +24,6 @@ exifData?.shutterSpeedValue
 exifData?.isoValue
 ```
 
-The extractData function returns three values, the tiff, exif and a dictionary containing all the info of the image. You can use the dictionary if there is some custom info in the image that is not a part of the standard TIFF/EXIF info.
+The extractInfo function returns three values, the tiff, exif and a dictionary containing all the info of the image. You can use the dictionary if there is some custom info in the image that is not a part of the standard TIFF/EXIF info.
 
 
