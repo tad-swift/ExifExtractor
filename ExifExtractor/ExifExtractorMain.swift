@@ -34,7 +34,7 @@ public class ExifExtractor {
     }
     
     /// Grabs the entire image data and returns it back to you
-    func requestImageData(from asset: PHAsset, completion: @escaping (Data?) -> Void) {
+    func requestImageData(for asset: PHAsset, completion: @escaping (Data?) -> Void) {
         let manager = PHImageManager.default()
         let requestOptions = PHImageRequestOptions()
         requestOptions.isSynchronous = true
