@@ -23,9 +23,32 @@ final class ExifExtractorTests: XCTestCase {
     
     // test should fail if the data returned is nil
     func testExtractInfoFromImage() throws {
-        // need to get a proper image to finish this test
-        let data = Data()
-        sut.extractInfoFromImage(data: data) { tiff, exif, info, errors in
+        // metadata of the image being tested
+        
+        /*
+         ["{Exif}": {
+         ColorSpace = 65535;
+         PixelXDimension = 828;
+         PixelYDimension = 1472;
+         }, "Depth": 8, "ColorModel": RGB, "PixelHeight": 1472, "ProfileName": Display P3, "{TIFF}": {
+         Orientation = 1;
+         }, "PixelWidth": 828, "{JFIF}": {
+         DensityUnit = 0;
+         JFIFVersion =     (
+         1,
+         0,
+         1
+         );
+         XDensity = 72;
+         YDensity = 72;
+         }, "Orientation": 1]
+         */
+        
+        
+        let fileImg = UIImage(named: "testImage", in: Bundle(for: ExifExtractorTests.self), compatibleWith: nil)
+        let mediaFileData = fileImg?.jpegData(compressionQuality: 1)
+        
+        sut.extractInfoFromImage(data: mediaFileData!) { tiff, exif, info, errors in
             XCTAssertNotNil(tiff)
             XCTAssertNotNil(exif)
             XCTAssertNotNil(info)

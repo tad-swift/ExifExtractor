@@ -15,6 +15,7 @@
 		45F79D4328F0A3AC00C1B2EE /* TIFF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F79D4228F0A3AC00C1B2EE /* TIFF.swift */; };
 		45F79D4528F0A3BC00C1B2EE /* EXIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F79D4428F0A3BC00C1B2EE /* EXIF.swift */; };
 		45F79D4728F0B0F200C1B2EE /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F79D4628F0B0F200C1B2EE /* Errors.swift */; };
+		45FEDDFB28F2558A0018EBDB /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45FEDDFA28F2558A0018EBDB /* TestAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		45F79D4428F0A3BC00C1B2EE /* EXIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXIF.swift; sourceTree = "<group>"; };
 		45F79D4628F0B0F200C1B2EE /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		45F79D4F28F0CA8100C1B2EE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		45FEDDFA28F2558A0018EBDB /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				45F79D3528F0A07300C1B2EE /* ExifExtractorTests.swift */,
+				45FEDDFA28F2558A0018EBDB /* TestAssets.xcassets */,
 			);
 			path = ExifExtractorTests;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45FEDDFB28F2558A0018EBDB /* TestAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
